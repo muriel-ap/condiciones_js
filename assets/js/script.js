@@ -9,11 +9,20 @@ imgCard.addEventListener("click", () => {
   }
 });
 
+//js para actividad 2
 const sticker1Input = document.querySelector('#sticker1');
 const sticker2Input = document.querySelector('#sticker2');
 const sticker3Input = document.querySelector('#sticker3');
 const mensajeTxt = document.querySelector('.mensajeTxt');
 const checkBtn = document.querySelector('.btn_verificar');
+
+const limpiarMensaje = () => {
+  mensajeTxt.innerHTML = "";
+};
+
+sticker1Input.addEventListener("input", limpiarMensaje);
+sticker2Input.addEventListener("input", limpiarMensaje);
+sticker3Input.addEventListener("input", limpiarMensaje);
 
 checkBtn.addEventListener("click", () => {
 
@@ -39,13 +48,13 @@ const selectTres = document.querySelector("#tres");
 const responder = document.querySelector(".responder");
 const validBtn = document.querySelector (".btn_validar");
 
-const limpiarMensaje = () => {
+const limpiarRespuesta = () => {
   responder.innerHTML = "";
 };
 
-selectUno.addEventListener("input", limpiarMensaje);
-selectDos.addEventListener("input", limpiarMensaje);
-selectTres.addEventListener("input", limpiarMensaje);
+selectUno.addEventListener("change", limpiarRespuesta);
+selectDos.addEventListener("change", limpiarRespuesta);
+selectTres.addEventListener("change", limpiarRespuesta);
 
 validBtn.addEventListener("click", () => {
 
@@ -60,7 +69,6 @@ validBtn.addEventListener("click", () => {
     responder.style.color = "rgb(236, 29, 29)";
   }
 });
-
 
 
 
