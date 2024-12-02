@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/img/favicon-16x16.png" type="image/x-icon">
+  <title>condiciones js</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+
+  <header>
+    <img class="logo" src="./assets/img/logo.png" alt="logo">
+    <nav>
+      <ul>
+        <li><a href="#actividad1">actividad 1</a></li>
+        <li><a href="#actividad2">Actividad 2</a></li>
+        <li><a href="#actividad3">Actividad 3</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="actividad1">
+      <h2>&#9790; Imagen:</h2>
+      <p>Haz Click en la imagen y ve lo que sucede</p>
+      <div class="card">
+        <img class="img_card" src="./assets/img/sailors.webp" alt="vinilo Epopeya">
+     </div>
+    </section>
+
+    <section id="actividad2">
+      <h2>&#9790; Stickers</h2>
+      <p>ingresa la cantidad de Stickers, recuerda que el máximo total es de 10 unidades</p>
+
+      <div class="sticker_container">
+        <div class="card">
+          <img class="sticker_img" src="./assets/img/serena.webp" alt="sailor moon">
+          <input type="text" id="sticker1">
+       </div>
+
+
+        <div class="card">
+          <img class="sticker_img" src="./assets/img/mercury.webp" alt="sailor mercury">
+          <input type="text" id="sticker2">
+       </div>
+
+
+        <div class="card">
+          <img class="sticker_img" src="./assets/img/marte.webp" alt="Sailor Marte">
+          <input type="text" id="sticker3">
+       </div>
+
+
+      </div>
+      <button class="btn_verificar">Verificar cantidad</button>
+
+      <h3 class="mensajeTxt"></h3>
+    </section>
+
+    <section id="actividad3">
+      <h2>&#9790; Password</h2>
+      <p>Ingresa el código de seguridad</p>
+
+      <div class="selectores">
+        <select name="uno" id="uno">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+
+        <select name="dos" id="dos">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+
+        <select name="tres" id="tres">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+      </div>
+      <button class="btn_validar">Validar</button>
+      <h3 class="responder"></h3>
+    </section>
+  </main>
+
+<footer>
+  <p> &copy;condiciones desafio 2 js</p>
+</footer>
+<script src="./assets/js/script.js"></script>
+
+</body>
+</html>
