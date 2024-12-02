@@ -1,7 +1,7 @@
 //js para actividad 1
 const imgCard = document.querySelector(".img_card");
 
-imgCard.addEventListener("click", function() {
+imgCard.addEventListener("click", () => {
   if (imgCard.style.border === "2px solid red") {
     imgCard.style.border = "none";
   } else {
@@ -9,28 +9,27 @@ imgCard.addEventListener("click", function() {
   }
 });
 
-//js para actividad 2
 const sticker1Input = document.querySelector('#sticker1');
 const sticker2Input = document.querySelector('#sticker2');
 const sticker3Input = document.querySelector('#sticker3');
 const mensajeTxt = document.querySelector('.mensajeTxt');
 const checkBtn = document.querySelector('.btn_verificar');
 
-checkBtn.addEventListener('click', () => {
+checkBtn.addEventListener("click", () => {
 
-  const sticker1Count = parseInt(sticker1Input.value) || 0;
-  const sticker2Count = parseInt(sticker2Input.value) || 0;
-  const sticker3Count = parseInt(sticker3Input.value) || 0;
+  const sticker1Cant = parseInt(sticker1Input.value) || 0;
+  const sticker2Cant = parseInt(sticker2Input.value) || 0;
+  const sticker3Cant = parseInt(sticker3Input.value) || 0;
 
-  const totalStickers = sticker1Count + sticker2Count + sticker3Count;
+  const totalStickers = sticker1Cant + sticker2Cant + sticker3Cant;
 
   if (totalStickers > 10) {
-    mensajeTxt.textContent = "Excediste el máximo permitido. Máximo: 10 stickers.";
-    mensajeTxt.style.color = "red";
+    mensajeTxt.innerHTML = "Excediste el máximo permitido de 10 Stickers.";
+    mensajeTxt.style.color = "rgb(236, 29, 29)";
   } else {
-    mensajeTxt.textContent = `Llevas ${totalStickers} stickers.`;
-    mensajeTxt.style.color = "green";
-  }
+    mensajeTxt.innerHTML = "Llevas ${totalStickers} stickers.";
+    mensajeTxt.style.color = "#000";
+    }
 });
 
 //js para actividad 3
@@ -38,21 +37,30 @@ const selectUno = document.querySelector("#uno");
 const selectDos = document.querySelector("#dos");
 const selectTres = document.querySelector("#tres");
 const responder = document.querySelector(".responder");
-const validBtn = document.querySelector (".btn_validar")
+const validBtn = document.querySelector (".btn_validar");
+
+const limpiarMensaje = () => {
+  responder.innerHTML = "";
+};
+
+selectUno.addEventListener("input", limpiarMensaje);
+selectDos.addEventListener("input", limpiarMensaje);
+selectTres.addEventListener("input", limpiarMensaje);
 
 validBtn.addEventListener("click", () => {
-  console.log("¡El botón fue clickeado!");
 
-  if (selectUno.value <= 0 || selectDos.value <= 0 || selectTres.value <= 0) {
-    alert("Debes seleccionar un número mayor");
-  } else if (selectUno.value === "9" && selectDos.value === "1" && selectTres.value === "1") {
-    responder.innerHTML = "¡Lo lograste! Contraseña 1 correcta";
+ if (selectUno.value === "9" && selectDos.value === "1" && selectTres.value === "1") {
+    responder.innerHTML = "Password 1 correcta";
+    mensajeTxt.style.color = "#000";
   } else if (selectUno.value === "7" && selectDos.value === "1" && selectTres.value === "4") {
-    responder.innerHTML = "¡Lo lograste! Contraseña 2 correcta";
+    responder.innerHTML = "Password 2 correcta";
+    mensajeTxt.style.color = "#000";
   } else {
-    responder.innerHTML = "Contraseña incorrecta, intenta nuevamente.";
+    responder.innerHTML = "Password incorrecta";
+    responder.style.color = "rgb(236, 29, 29)";
   }
 });
+
 
 
 
