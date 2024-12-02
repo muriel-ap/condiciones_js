@@ -27,7 +27,7 @@ checkBtn.addEventListener("click", () => {
     mensajeTxt.innerHTML = "Excediste el máximo permitido de 10 Stickers.";
     mensajeTxt.style.color = "rgb(236, 29, 29)";
   } else {
-    mensajeTxt.innerHTML = "Llevas ${totalStickers} stickers.";
+    mensajeTxt.innerHTML = `Llevas ${totalStickers} stickers.`;
     mensajeTxt.style.color = "#000";
     }
 });
